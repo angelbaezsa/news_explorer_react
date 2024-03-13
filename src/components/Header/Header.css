@@ -20,11 +20,11 @@
   color: white;
   box-sizing: border-box;
   padding-top: 160px;
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   left: 0;
-  top: 0;
+  top: -65px;
   z-index: 1;
   cursor: pointer;
 }

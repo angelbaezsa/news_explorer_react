@@ -3,10 +3,23 @@
   max-width: 1440px;
   max-height: 80px;
   box-sizing: border-box;
-  position: fixed;
-  bottom: 0;
   font-family: "roboto";
   justify-content: space-between;
+  position: relative;
+  top: -65px;
+  padding-right: 104px;
+  padding-left: 104px;
+}
+
+.footer__text {
+  margin: 0;
+  color: #b6bcbf;
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
 .icon-linkedin {
