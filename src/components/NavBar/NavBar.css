@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "roboto";
+  src: url("../../../public/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+li {
+  list-style: none;
+}
+
+.navbar {
+  grid-area: navbar navbar navbar;
+  width: 100%;
+  height: 65px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 105px;
+  background: #c4c4c403;
+  z-index: 2;
+  color: white;
+  border-bottom: solid #d1d2d667 0.05px;
+}
+.navbar_black {
+  grid-area: navbar navbar navbar;
+  width: 100%;
+  height: 56px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 16px;
+  background-color: #000000;
+  z-index: 2;
+  color: white;
+  border-bottom: solid #d1d2d667 0.05px;
+}
+
+.navbar__logo {
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar__button-wrapper {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+}
+
+.navbar__button {
+  font-family: "roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.navbar__toggle-button {
+  display: none;
+  min-height: 25px;
+  min-width: 25px;
+  border: none;
+}
+.toggle-menu {
+  display: none;
+}
+
+.active {
+  text-decoration: none;
+}
+
+/* screen media devices only from this point only */
+
+@media only screen and (max-width: 500px) {
+  .navbar {
+    padding: 0 auto 0 16px;
+    max-height: 56px;
+  }
+
+  .navbar__button-wrapper {
+    display: none;
+  }
+
+  .toggle-button_closed {
+    display: block;
+    background-image: url("../../images/menu.svg");
+    background: no-repeat;
+  }
+  .toggle-button_open {
+    display: block;
+    background-image: url("../../images/close.svg");
+    background: no-repeat;
+  }
+  .toggle-menu_modal {
+    display: flex;
+    position: fixed; /* Fixed position for modal */
+    left: 0;
+    top: 56px;
+    z-index: 1000; /* Higher z-index to appear on top of other content */
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6); /* Use rgba for transparency */
+    backdrop-filter: blur(5px); /* Add blur effect to the background */
+    justify-content: start;
+    align-items: start;
+  }
+
+  /* Styles for the toggle menu wrapper */
+  .toggle-menu-wrapper {
+    position: relative; /* Relative position for children positioning */
+    z-index: 1100; /* Higher z-index than modal for content visibility */
+    width: 100%; /* Adjust width as needed */
+    height: 174px;
+    max-width: 500px; /* Set a max-width for responsiveness */
+    background-color: #000000; /* Background color for the menu */
+    border-radius: 8px; /* Rounded corners for the menu */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    box-sizing: border-box;
+  }
+
+  /* Styles for the items inside the toggle menu */
+  .toggle-menu {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .toggle-menu__link {
+    font-size: 18px;
+    line-height: 56px;
+    font-weight: 500;
+    font-family: "roboto", sans-serif;
+    color: white;
+  }
+  .toggle-menu__button {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    font-family: "roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 25px;
+    height: 56px;
+    margin-top: 22px;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  .navbar {
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .navbar {
+    padding: 0 16px;
+  }
+}

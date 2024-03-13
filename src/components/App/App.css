@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "roboto slab";
+  src: url("../../../public/fonts/RobotoSlab-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../../../public/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "roboto slab", serif;
+}
+
+.page {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  position: relative;
+  cursor: pointer;
+}
