@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  max-width: 1440px;
+  max-height: 80px;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  font-family: "roboto";
+  justify-content: space-between;
+}
+
+.icon-linkedin {
+  height: 20px;
+}

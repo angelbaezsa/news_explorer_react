@@ -10,10 +10,14 @@ const Footer = () => {
         <NavLink to="/">Home</NavLink>
         <NavLink to="https://tripleten.com/">Tripleten</NavLink>
         <NavLink to="/">
-          <img src={githubLogo} alt="" />
+          <img className="footer__icon icon-github" src={githubLogo} alt="" />
         </NavLink>
         <NavLink to="https://www.linkedin.com/in/angel-baez-099598185/">
-          <img src={linkedInLogo} alt="" />
+          <img
+            className="footer__icon icon-linkedin"
+            src={linkedInLogo}
+            alt=""
+          />
         </NavLink>
       </div>
     </footer>
