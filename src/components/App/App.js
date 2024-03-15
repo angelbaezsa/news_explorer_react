@@ -1,6 +1,7 @@
 import "./App.css";
 import NavBar from "../NavBar/NavBar";
 import Header from "../Header/Header";
+import About from "../About/ About";
 import Footer from "../Footer/Footer";
 
 import { Switch, Route } from "react-router-dom";
@@ -12,6 +13,7 @@ function App() {
       <Switch>
         <Route path={"/"}>
           <Header onSearch={"addSearch function here"} />
+          <About />
           <Footer />
         </Route>
         <Route path={"/saved-news"}></Route>

@@ -32,13 +32,18 @@ const NavBar = ({ onHome, onSignIn }) => {
       </button>
 
       <ul className="navbar__button-wrapper">
-        <li className="navbar__button button-type-home">
-          <NavLink to="/" exact>
+        <li>
+          <NavLink className="navbar__button button-type-home" to="/" exact>
             Home
           </NavLink>
         </li>
-        <li className="navbar__button button-type-signin" onClick={onSignIn}>
-          Signin
+        <li>
+          <button
+            className="navbar__button button-type-signin"
+            onClick={onSignIn}
+          >
+            Signin
+          </button>
         </li>
       </ul>
       {isToggle ? (
