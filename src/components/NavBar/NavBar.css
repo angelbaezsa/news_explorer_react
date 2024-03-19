@@ -11,6 +11,14 @@ li {
   list-style: none;
 }
 
+.light-font {
+  color: white;
+}
+
+.dark-font {
+  color: black;
+}
+
 .navbar {
   grid-area: navbar navbar navbar;
   width: 100%;
@@ -28,6 +36,25 @@ li {
   border-bottom: solid #d1d2d667 0.05px;
   position: absolute;
 }
+
+.navbar__saved-news {
+  grid-area: navbar navbar navbar;
+  width: 100%;
+  height: 65px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 105px;
+  background: #c4c4c403;
+  z-index: 2;
+  color: black;
+  border-bottom: solid #d1d2d667 0.05px;
+  position: absolute;
+}
+
 .navbar_black {
   grid-area: navbar navbar navbar;
   position: absolute;
@@ -51,7 +78,7 @@ li {
   font-weight: 700;
   font-size: 20px;
   text-decoration: none;
-  color: white;
+  /* color: white; */
 }
 
 .navbar__button-wrapper {
@@ -65,8 +92,14 @@ li {
   font-family: "roboto", sans-serif;
   font-weight: 500;
   font-size: 20px;
-  color: white;
+  /* color: white; */
   cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar__home-button_selected {
+  border-bottom: 3px white solid;
+  padding-bottom: 17px;
 }
 .button-type-signin {
   border-radius: 25px;
@@ -76,6 +109,25 @@ li {
   height: 48px;
   margin: 0;
   align-self: center;
+}
+.button-type-signout-dark {
+  border-radius: 25px;
+  border: 1px rgb(0, 0, 0) solid;
+  background-color: transparent;
+  width: 112px;
+  height: 48px;
+  margin: 0;
+  align-self: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__button-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
 }
 
 .navbar__toggle-button {
