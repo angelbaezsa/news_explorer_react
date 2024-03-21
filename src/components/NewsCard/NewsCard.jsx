@@ -16,7 +16,10 @@ function NewsCard({ item, onSignIn }) {
           <span htmlFor="" className="card__keyword-label card__button">
             Photography
           </span>
-          <div>
+          <div className="card__option-wrapper">
+            <button className="card__delete-button-banner card__button">
+              delete article
+            </button>
             <button className="card__delete-button card__button"></button>
           </div>
         </div>

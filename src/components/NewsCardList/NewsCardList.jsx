@@ -1,8 +1,10 @@
 import "./NewsCardList.css";
 import React, { useState, useEffect } from "react";
 import NewsCard from "../NewsCard/NewsCard.jsx";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min.js";
 
 const NewsCardList = ({ cardList }) => {
+  const location = useLocation();
   const [numberOfCards, setNumberOfCards] = useState(3);
   const [hideShowMoreButton, setHideShowMoreButton] = useState(true);
   const firstThreeCards = cardList.slice(0, numberOfCards);
@@ -19,7 +21,7 @@ const NewsCardList = ({ cardList }) => {
     setNumberOfCards(cardList.length);
   };
 
-  return (
+  return location.pathname === "/" ? (
     <>
       <h2 className="main__title">Search results</h2>
       <div className="main__card-container card-container">
@@ -35,6 +37,14 @@ const NewsCardList = ({ cardList }) => {
           Show more
         </button>
       )}
+    </>
+  ) : (
+    <>
+      <div className="main__card-container card-container">
+        {cardList.map((item, index) => (
+          <NewsCard item={item} key={index} />
+        ))}
+      </div>
     </>
   );
 };

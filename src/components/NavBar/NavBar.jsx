@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import toggleButtonClosed from "../../images/menu.svg";
 import toggleButtonOpen from "../../images/close.svg";
+import toggleButtonClosedBlack from "../../images/menu_black.svg";
+import toggleButtonOpenBlack from "../../images/close_black.svg";
 import icon from "../../images/logout.svg";
 
 const NavBar = ({ onHome, onSignIn }) => {
@@ -87,7 +89,7 @@ const NavBar = ({ onHome, onSignIn }) => {
         }`}
       >
         <img
-          src={`${isToggle ? toggleButtonOpen : toggleButtonClosed}`}
+          src={`${isToggle ? toggleButtonOpen : toggleButtonClosedBlack}`}
           alt=""
         />
       </button>
@@ -109,6 +111,7 @@ const NavBar = ({ onHome, onSignIn }) => {
             className="dark-font navbar__button button-type-signout-dark"
             onClick={onSignIn}
           >
+            {/* here goes the user.name*/}
             Elize
             <img className="navbar__button-icon" src={icon} alt="" />
           </button>

@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 import Main from "../Main/Main";
 import About from "../About/ About";
 import Footer from "../Footer/Footer";
-
+import SavedNews from "../SavedNews/SavedNews.jsx";
 import { Switch, Route } from "react-router-dom";
 import { useState } from "react";
 
@@ -24,7 +24,9 @@ function App() {
           <About />
           <Footer />
         </Route>
-        <Route path={"/saved-news"} exact></Route>
+        <Route path={"/saved-news"}>
+          <SavedNews />
+        </Route>
       </Switch>
     </div>
   );
