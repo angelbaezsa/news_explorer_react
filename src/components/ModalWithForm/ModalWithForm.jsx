@@ -5,24 +5,12 @@ import "./ModalWithForm.css";
 import React from "react";
 import { useState } from "react";
 
-function ModalWithForm({ children, onCloseModal, submitEvent, name }) {
+function ModalWithForm({ children, onCloseModal, submitEvent, name, isValid }) {
   return (
     <div className={`modal modal_type_${name}`}>
-      <div className="modal_content">
-        <button
-          className="form_close-button close-button"
-          onClick={onCloseModal}
-        ></button>
-
-        <h3 className="form_title">{name}</h3>
-
-        <form action="submit" onSubmit={submitEvent}>
-          {children}
-
-          <button className="form__button-submit" type="submit">
-            {name}
-          </button>
-        </form>
+      <div className="content">
+        <button className="modal__close-button" onClick={onCloseModal}></button>
+        {children}
       </div>
     </div>
   );

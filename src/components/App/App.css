@@ -15,6 +15,11 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "inter";
+  src: url("/public/fonts/inter-font.ttf") format("truetype");
+}
+
 body {
   font-family: "roboto slab", serif;
 }

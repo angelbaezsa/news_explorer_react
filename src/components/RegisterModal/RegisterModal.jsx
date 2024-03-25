@@ -1,9 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
-// import "./RegisterModal.css";
+import "./RegisterModal.css";
 
-const LoginModal = ({ onCloseModal, onSignUp }) => {
+const RegisterModal = ({ onCloseModal, onSignIn }) => {
   const {
     register,
     handleSubmit,
@@ -17,7 +17,7 @@ const LoginModal = ({ onCloseModal, onSignUp }) => {
   return (
     <ModalWithForm onCloseModal={onCloseModal} name={"Sign Up"}>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        <h2 className="form__title">Sign In</h2>
+        <h2 className="form__title">Sign Up</h2>
         {/* Email input */}
         <fieldset className="form__input-fieldset input-fieldset">
           <label className="form__label" htmlFor="email">
@@ -60,6 +60,26 @@ const LoginModal = ({ onCloseModal, onSignUp }) => {
           )}
         </fieldset>
 
+        <fieldset className="form__input-fieldset input-fieldset">
+          <label className="form__label" htmlFor="username">
+            Username
+          </label>
+          <input
+            className="form__input"
+            type="username"
+            placeholder="Enter username"
+            {...register("username", {
+              required: true,
+              minLength: 6,
+            })}
+          />
+          {errors.username && (
+            <span className="error">
+              username is required (min. 6 characters)
+            </span>
+          )}
+        </fieldset>
+
         {/* Disable the submit button if form is invalid */}
         <button
           type="submit"
@@ -72,7 +92,7 @@ const LoginModal = ({ onCloseModal, onSignUp }) => {
         </button>
         <p className="form__text">
           Or&nbsp;
-          <span className="form__url" onClick={onSignUp}>
+          <span className="form__url" onClick={onSignIn}>
             Signin
           </span>
         </p>
@@ -81,4 +101,4 @@ const LoginModal = ({ onCloseModal, onSignUp }) => {
   );
 };
 
-export default LoginModal;
+export default RegisterModal;
