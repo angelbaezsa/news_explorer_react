@@ -85,7 +85,8 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  column-gap: 20px;
+  column-gap: 16px;
+  height: 100%;
 }
 
 .navbar__button {
@@ -101,6 +102,14 @@ li {
   border-bottom: 3px white solid;
   padding-bottom: 17px;
 }
+.navbar__saved-news-button_selected {
+  display: inline-block;
+  text-align: center;
+  margin-top: 17px;
+  border-bottom: 3px rgb(0, 0, 0) solid;
+  padding-bottom: 17px;
+  width: 160px;
+}
 .button-type-signin {
   border-radius: 25px;
   border: 1px white solid;
@@ -114,7 +123,7 @@ li {
   border-radius: 25px;
   border: 1px rgb(0, 0, 0) solid;
   background-color: transparent;
-  width: 112px;
+  width: 100px;
   height: 48px;
   margin: 0;
   align-self: center;
@@ -146,7 +155,7 @@ li {
 
 /* screen media devices only from this point only */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .navbar {
     padding: 0 auto 0 16px;
     max-height: 56px;

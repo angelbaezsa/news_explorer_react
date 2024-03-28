@@ -18,12 +18,12 @@ const NewsCardList = ({ cardList }) => {
   }, [numberOfCards, cardList.length]);
 
   const showMore = () => {
-    setNumberOfCards(cardList.length);
+    setNumberOfCards(numberOfCards + 3);
   };
 
   return location.pathname === "/" ? (
     <>
-      <h2 className="main__title">Search results</h2>
+      {/* <h2 className="main__title">Search results</h2> */}
       <div className="main__card-container card-container">
         {firstThreeCards.map((item, index) => (
           <NewsCard item={item} key={index} />

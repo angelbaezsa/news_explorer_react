@@ -5,7 +5,13 @@ const Header = ({ onSearch }) => {
   const [search, setSearch] = useState("");
   return (
     <div className="header">
-      <form className="header__form search-form" onSubmit={onSearch}>
+      <form
+        className="header__form search-form"
+        onSubmit={(event) => {
+          event.preventDefault();
+          onSearch(search);
+        }}
+      >
         <h1 className="header__title title">What's going on in the world?</h1>
         <h3 className="header__sub-title sub-title">
           Find the latest news on any topic and save them in your personal
@@ -16,6 +22,9 @@ const Header = ({ onSearch }) => {
             type="search"
             placeholder="Enter topic"
             className="search-bar"
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
           />
           <button className="form__submit-button submit-button" type="submit">
             Search

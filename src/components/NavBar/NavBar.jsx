@@ -8,13 +8,11 @@ import toggleButtonClosedBlack from "../../images/menu_black.svg";
 import toggleButtonOpenBlack from "../../images/close_black.svg";
 import icon from "../../images/logout.svg";
 
-const NavBar = ({ onHome, onSignIn }) => {
+const NavBar = ({ onHome, onSignIn, onSignOut }) => {
   // Receive props as an object
-  const [isHome, setIsHome] = useState(""); // Use useState correctly
+
   const [isToggle, setIsToggle] = useState(false);
   const location = useLocation();
-  const isSavedNewsLocation = location.pathname === "/saved-news";
-  const isHomeLocation = location.pathname === "/";
 
   const handleToggleMenu = () => {
     setIsToggle(!isToggle);
@@ -107,9 +105,22 @@ const NavBar = ({ onHome, onSignIn }) => {
           </NavLink>
         </li>
         <li>
+          <NavLink
+            className={`dark-font navbar__button navbar__home-button ${
+              location.pathname === "/saved-news"
+                ? "navbar__saved-news-button_selected"
+                : null
+            }`}
+            to="/"
+            exact
+          >
+            saved articles
+          </NavLink>
+        </li>
+        <li>
           <button
             className="dark-font navbar__button button-type-signout-dark"
-            onClick={onSignIn}
+            onClick={onSignOut}
           >
             {/* here goes the user.name*/}
             Elize
