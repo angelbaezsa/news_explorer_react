@@ -1,10 +1,10 @@
 import "./App.css";
 
-import NavBar from "../NavBar/NavBar";
-import Header from "../Header/Header";
-import Main from "../Main/Main";
-import About from "../About/ About";
-import Footer from "../Footer/Footer";
+import NavBar from "../NavBar/NavBar.jsx";
+import Header from "../Header/Header.jsx";
+import Main from "../Main/Main.jsx";
+import About from "../About/ About.jsx";
+import Footer from "../Footer/Footer.jsx";
 import SavedNews from "../SavedNews/SavedNews.jsx";
 import RegisterModal from "../RegisterModal/RegisterModal.jsx";
 import LoginModal from "../LoginModal/LoginModal.jsx";
