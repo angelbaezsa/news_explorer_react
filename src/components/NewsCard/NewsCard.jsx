@@ -56,7 +56,7 @@ function NewsCard({ item, onSignIn }) {
           <p className="card__text">{item.content}</p>
         </div>
         <div className="card__publisher-wrapper">
-          <p className="card__publisher">{item.publisher}</p>
+          <p className="card__publisher">{item.source.name}</p>
         </div>
       </div>
     </div>

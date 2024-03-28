@@ -189,10 +189,13 @@
     width: 288px;
     height: 440px;
   }
-
-  .card__text {
+  .card__text-wrapper {
     max-height: 88px;
-
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+  }
+  .card__text {
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
