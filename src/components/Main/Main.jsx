@@ -2,10 +2,12 @@ import React from "react";
 import "./Main.css";
 import NewsCardList from "../NewsCardList/NewsCardList";
 import Preloader from "../Preloader/Preloader.jsx";
-import cardList from "../../utils/utils.js";
+import cardListArray from "../../utils/utils.js";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min.js";
 
 const Main = ({ isLoading, searchResults, savedNews }) => {
-  return (
+  const location = useLocation();
+  return location.pathname === "/" ? (
     <div className="main">
       {isLoading ? (
         <Preloader />
@@ -26,6 +28,10 @@ const Main = ({ isLoading, searchResults, savedNews }) => {
           )}
         </>
       )}
+    </div>
+  ) : (
+    <div className="main">
+      <NewsCardList cardList={cardListArray} />
     </div>
   );
 };

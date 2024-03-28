@@ -2,6 +2,7 @@ import "./NewsCardList.css";
 import React, { useState, useEffect } from "react";
 import NewsCard from "../NewsCard/NewsCard.jsx";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min.js";
+import cardListArray from "../../utils/utils.js";
 
 const NewsCardList = ({ cardList }) => {
   const location = useLocation();
@@ -41,7 +42,7 @@ const NewsCardList = ({ cardList }) => {
   ) : (
     <>
       <div className="main__card-container card-container">
-        {cardList.map((item, index) => (
+        {cardListArray.map((item, index) => (
           <NewsCard item={item} key={index} />
         ))}
       </div>

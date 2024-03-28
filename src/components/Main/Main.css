@@ -8,9 +8,10 @@
 }
 
 .main__not-found {
+  font-family: "roboto";
   text-align: center;
   margin: 0;
-  font-size: 45px;
+  font-size: 35px;
 }
 
 @media only screen and (max-width: 1003px) {
