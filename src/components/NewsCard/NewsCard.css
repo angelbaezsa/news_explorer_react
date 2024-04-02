@@ -38,7 +38,7 @@
   text-align: center;
   padding: 8px 22px;
   height: 40px;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
@@ -48,7 +48,7 @@
 .card__keyword-label {
   justify-self: flex-start;
   max-height: 25px;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
@@ -59,6 +59,7 @@
   background-image: url("../../images/trash.svg");
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .card__delete-button:hover {
@@ -84,6 +85,7 @@
 
 .card__signin-button {
   display: none;
+  cursor: pointer;
 }
 
 .card__save-button {
@@ -165,7 +167,7 @@
 .card__publisher {
   margin: 0;
   margin-top: auto;
-  font-family: "roboto slab";
+  font-family: "roboto slab", serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -181,6 +183,13 @@
     line-height: 24px;
     text-align: left;
     height: 70px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+  .card {
+    min-width: 224px;
+    max-height: 420px;
   }
 }
 

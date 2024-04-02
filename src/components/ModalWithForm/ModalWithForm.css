@@ -45,10 +45,10 @@
 
 @media only screen and (max-width: 550px) {
   .content {
-    position: absolute;
+    position: fixed;
     padding: 34px 16px 28px 16px;
     width: 100vw;
-    height: 98vh;
+    min-height: 98vh;
     bottom: 0;
     top: 40px;
   }

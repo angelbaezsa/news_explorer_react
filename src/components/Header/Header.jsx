@@ -4,7 +4,7 @@ import "./Header.css";
 const Header = ({ onSearch }) => {
   const [search, setSearch] = useState("");
   return (
-    <div className="header">
+    <header className="header">
       <form
         className="header__form search-form"
         onSubmit={(event) => {
@@ -31,7 +31,7 @@ const Header = ({ onSearch }) => {
           </button>
         </div>
       </form>
-    </div>
+    </header>
   );
 };
 export default Header;

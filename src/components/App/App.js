@@ -22,7 +22,7 @@ function App() {
     setDidSearch(true);
     if (keyword.trim() !== "") {
       setIsLoading(true);
-      console.log("this is the search result: ", keyword);
+      // console.log("this is the search result: ", keyword);
       newsApi.getNews(keyword).then((response) => {
         if (response.length !== 0) {
           console.log(response.articles);
@@ -38,6 +38,10 @@ function App() {
     if (event.key === "Escape") {
       handleCloseModal();
     }
+  };
+
+  const handleSignIn = () => {
+    setOpenModal("login");
   };
   const handleOpenModal = (modal) => {
     setOpenModal(modal);
@@ -55,7 +59,11 @@ function App() {
         <Route exact path={"/"}>
           <Header onSearch={handleSearch} />
           {didSearch ? (
-            <Main searchResults={searchResult} isLoading={isLoading} />
+            <Main
+              onSignIn={handleSignIn}
+              searchResults={searchResult}
+              isLoading={isLoading}
+            />
           ) : null}
           <About />
           <Footer />

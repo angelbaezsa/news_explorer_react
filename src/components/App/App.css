@@ -1,16 +1,19 @@
 @font-face {
   font-family: "roboto slab";
-  src: url("/public/fonts/RobotoSlab-VariableFont_wght.ttf") format("truetype");
+  /* src: url("/public/fonts/RobotoSlab-VariableFont_wght.ttf") format("truetype"); */
+  src: url("../../../public/fonts/RobotoSlab-VariableFont_wght.ttf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "roboto";
-  src: url("/public/fonts/Roboto-Regular.ttf") format("truetype");
+  /* src: url("/public/fonts/Roboto-Regular.ttf") format("truetype"); */
+  src: url("../../../public/fonts/Roboto-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("/public/fonts/SourceSansPro-Regular.otf") format("opentype"); /* Adjust format as needed */
+  src: url("../../../public/fonts/SourceSansPro-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -30,5 +33,5 @@ body {
   flex-direction: column;
   max-width: 1440px;
   position: relative;
-  cursor: pointer;
+  /* cursor: pointer; */
 }

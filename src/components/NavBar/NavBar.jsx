@@ -62,12 +62,20 @@ const NavBar = ({ onHome, onSignIn, onSignOut }) => {
           <div className="toggle-menu-wrapper">
             <ul className="navbar__toggle-menu toggle-menu">
               <li className="toggle-menu_item">
-                <NavLink to="/" className="toggle-menu__link">
-                  Home
+                <NavLink to="/saved-news" className="toggle-menu__link">
+                  Saved news
                 </NavLink>
               </li>
               <li className="toggle-menu_item">
-                <button className="toggle-menu__button">Sign in</button>
+                <button
+                  onClick={() => {
+                    onSignIn();
+                    setIsToggle(!isToggle);
+                  }}
+                  className="toggle-menu__button"
+                >
+                  Sign in
+                </button>
               </li>
             </ul>
           </div>
@@ -77,7 +85,11 @@ const NavBar = ({ onHome, onSignIn, onSignOut }) => {
   ) : (
     <nav className={`${isToggle ? "navbar_black" : "navbar__saved-news"} `}>
       <NavLink to="/">
-        <h3 className="navbar__logo dark-font">NewsExplorer</h3>
+        <h3
+          className={`navbar__logo  ${isToggle ? `light-font` : `dark-font`}`}
+        >
+          NewsExplorer
+        </h3>
       </NavLink>
 
       <button
@@ -138,7 +150,7 @@ const NavBar = ({ onHome, onSignIn, onSignOut }) => {
                 </NavLink>
               </li>
               <li className="toggle-menu_item">
-                <button className="toggle-menu__button">Sign in</button>
+                <button className="toggle-menu__button">Sign out</button>
               </li>
             </ul>
           </div>

@@ -4,7 +4,7 @@ import NewsCard from "../NewsCard/NewsCard.jsx";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min.js";
 import cardListArray from "../../utils/utils.js";
 
-const NewsCardList = ({ cardList }) => {
+const NewsCardList = ({ cardList, onDelete, onSignIn }) => {
   const location = useLocation();
   const [numberOfCards, setNumberOfCards] = useState(3);
   const [hideShowMoreButton, setHideShowMoreButton] = useState(true);
@@ -27,7 +27,7 @@ const NewsCardList = ({ cardList }) => {
       {/* <h2 className="main__title">Search results</h2> */}
       <div className="main__card-container card-container">
         {firstThreeCards.map((item, index) => (
-          <NewsCard item={item} key={index} />
+          <NewsCard onSignIn={onSignIn} item={item} key={index} />
         ))}
       </div>
       {!hideShowMoreButton && (
@@ -43,7 +43,7 @@ const NewsCardList = ({ cardList }) => {
     <>
       <div className="main__card-container card-container">
         {cardListArray.map((item, index) => (
-          <NewsCard item={item} key={index} />
+          <NewsCard onSignIn={onSignIn} item={item} key={index} />
         ))}
       </div>
     </>

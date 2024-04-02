@@ -1,8 +1,10 @@
 .about {
   font-family: "roboto", sans-serif;
   display: flex;
+  /* padding: 80px 0 80px 104px; */
   padding-left: 104px;
   padding-top: 80px;
+  padding-bottom: 80px;
   column-gap: 56px;
   color: #1a1b22;
 }
@@ -14,7 +16,7 @@
 }
 
 .about__title {
-  font-family: "roboto slab";
+  font-family: "roboto slab", serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 46px;
@@ -26,7 +28,7 @@
 
 .biography {
   margin-top: 0;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -38,7 +40,7 @@
 
 @media (min-width: 501px) and (max-width: 768px) {
   .about {
-    padding: 40px 40px 0 40px;
+    padding: 40px 40px 61px 40px;
     column-gap: 32px;
   }
 
@@ -56,17 +58,16 @@
   .portrait {
     width: 232px;
     height: 232px;
+    margin-top: 21px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1000px) {
   .about {
-    padding: 40px 40px 0 40px;
+    padding: 40px 40px 61px 40px;
     column-gap: 32px;
   }
 
-  .biography {
-  }
   .about__title {
     font-size: 30px;
     font-weight: 400;
@@ -83,7 +84,7 @@
 
 @media (min-width: 320px) and (max-width: 500px) {
   .about {
-    padding: 40px 40px 0 40px;
+    padding: 32px 24px 40px;
     flex-direction: column;
   }
 
@@ -96,8 +97,8 @@
     margin-top: 0;
   }
   .portrait {
-    width: 232px;
-    height: 232px;
+    width: 272px;
+    height: 272px;
   }
   .portrait-wrapper {
     align-self: center;

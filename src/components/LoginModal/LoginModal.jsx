@@ -68,12 +68,12 @@ const LoginModal = ({ onCloseModal, onSignUp }) => {
           }`}
           disabled={!isValid}
         >
-          Register
+          Signin
         </button>
         <p className="form__text">
           Or&nbsp;
           <span className="form__url" onClick={onSignUp}>
-            Signin
+            Signup
           </span>
         </p>
       </form>

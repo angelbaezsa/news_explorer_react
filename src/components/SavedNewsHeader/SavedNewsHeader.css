@@ -1,11 +1,10 @@
 .saved-news__header {
   padding: 40px 104px 56px;
-  padding-bottom: 56px;
   box-sizing: border-box;
 }
 
 .saved-news__header-title {
-  font-family: "roboto";
+  font-family: "roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -17,7 +16,7 @@
 .saved-news__header-subtitle {
   margin: 0;
   margin-top: 28px;
-  font-family: "roboto slab";
+  font-family: "roboto slab", serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 46px;
@@ -28,6 +27,11 @@
 .saved-news__keywords {
   margin: 0;
   margin-top: 30px;
+  font-family: "roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
 }
 
 @media (min-width: 501px) and (max-width: 768px) {
@@ -46,7 +50,7 @@
     font-size: 30px;
     font-weight: 400;
     line-height: 34px;
-    max-width: 336px;
+    max-width: 338px;
   }
   .saved-news__keywords {
     margin: 0;

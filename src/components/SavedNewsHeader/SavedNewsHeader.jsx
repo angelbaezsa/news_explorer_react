@@ -8,12 +8,12 @@ const SavedNewsHeader = () => {
     if (keywordCount === 0) {
       return "No keywords";
     } else if (keywordCount === 1) {
-      return cardListArray[0].title;
+      return cardListArray[0].source.name;
     } else if (keywordCount === 2) {
-      return `${cardListArray[0].title} and ${cardListArray[1].title}`;
+      return `${cardListArray[0].source.name} and ${cardListArray[1].source.name}`;
     } else {
       const otherCount = keywordCount - 2;
-      return `${cardListArray[0].title}, ${cardListArray[1].title}, and ${otherCount} other`;
+      return `${cardListArray[0].source.name}, ${cardListArray[1].source.name}, and ${otherCount} other`;
     }
   };
 

@@ -3,7 +3,7 @@ import "./NewsCard.css";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { formatDate } from "../../utils/utils.js";
 
-function NewsCard({ item, onSignIn }) {
+function NewsCard({ item, onSignIn, onDelete }) {
   const location = useLocation();
 
   const [user, setUser] = useState(false);
@@ -19,14 +19,20 @@ function NewsCard({ item, onSignIn }) {
             <button className="card__delete-button-banner card__button">
               delete article
             </button>
-            <button className="card__delete-button card__button"></button>
+            <button
+              onClick={onDelete}
+              className="card__delete-button card__button"
+            ></button>
           </div>
         </div>
       ) : (
         <div className="card__button-wrapper">
           <div className="save-button-wrapper">
             {user ? null : (
-              <button className="card__signin-button card__button">
+              <button
+                onClick={onSignIn}
+                className="card__signin-button card__button"
+              >
                 Sign in to save articles
               </button>
             )}

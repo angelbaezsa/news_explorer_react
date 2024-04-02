@@ -8,38 +8,6 @@ const cardListArray = [
   {
     source: {
       id: null,
-      name: "Gizmodo.jp",
-    },
-    author: "岡本玄介",
-    title: "『ドラゴンボール』の世界に行ける。巨大テーマパークが中東に",
-    description:
-      "Image:東映アニメーション株式会社オラわくわくしてきたぞ!!1984年に連載が開始され、アニメやゲームや映画などで世界中の人たちから愛され続けている『ドラゴンボール』。鳥山明さんが描くあの世界に、誰もが行ってみたいと思ったことあるんじゃないでしょうか？DBがテーマパークになる!?サウジアラビアにて、世界初となる『ドラゴンボール』のテーマパーク建設が決定しました。50万平方メートル以上の敷地には",
-    url: "https://www.gizmodo.jp/2024/03/dragon-ball-park.html",
-    urlToImage:
-      "https://media.loom-app.com/gizmodo/dist/images/2024/03/22/240325_qiddiya.jpg?w=1280&h=630&f=jpg",
-    publishedAt: "2024-03-22T23:00:00Z",
-    content:
-      "!! \r\n1984\r\nDB!? \r\n507\r\nVideo: Qiddiya - /YouTube\r\n70m\r\nImage: \r\n1\r\nQiddiya Investment Company5307\r\nSource: YouTube, Qiddiya, DRAGONBALL OFFICIAL SITE, via",
-  },
-  {
-    source: {
-      id: null,
-      name: "Espinof.com",
-    },
-    author: "Mariló Delgado",
-    title:
-      '"Perdón por cagarla con la adaptación". El Goku de acción real rinde tributo a Akira Toriyama y se disculpa (por enésima vez) por \'Dragonball Evolution',
-    description:
-      "La semana pasada tuvimos que despedirnos de tuvimos que despedirnos de Akira Toriyama, que nos dejó de sopetón a los 68 años. Los homenajes y despedidas por todo el globo no dejaron de llegar durante todo el fin de semana, dejando claro que pocas obras de man…",
-    url: "https://www.espinof.com/anime/perdon-cagarla-adaptacion-goku-accion-real-rinde-tributo-a-akira-toriyama-se-disculpa-enesima-vez-dragonball-evolution",
-    urlToImage: "https://i.blogs.es/bd51bc/dragonball-evolution/840_560.jpeg",
-    publishedAt: "2024-03-11T13:01:15Z",
-    content:
-      "La semana pasada tuvimos que despedirnos de tuvimos que despedirnos de Akira Toriyama, que nos dejó de sopetón a los 68 años. Los homenajes y despedidas por todo el globo no dejaron de llegar durante… [+1809 chars]",
-  },
-  {
-    source: {
-      id: null,
       name: "La Vanguardia",
     },
     author: "Marcos Catalán",
