@@ -24,14 +24,18 @@ const Footer = () => {
         </div>
         <div className="footer__icon-container">
           <NavLink to="/">
-            <img className="footer__icon icon-github" src={githubLogo} alt="" />
+            <img
+              className="footer__icon icon-github"
+              src={githubLogo}
+              alt="logo"
+            />
           </NavLink>
 
           <a href="https://www.linkedin.com/in/angel-baez-099598185/">
             <img
               className="footer__icon icon-linkedin"
               src={facebookLogo}
-              alt=""
+              alt="logo"
             />
           </a>
         </div>
@@ -62,7 +66,7 @@ const Footer = () => {
             <img
               className="footer__icon icon-linkedin"
               src={facebookLogo}
-              alt=""
+              alt="logo"
             />
           </a>
         </div>

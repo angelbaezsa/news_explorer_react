@@ -92,9 +92,9 @@ const RegisterModal = ({ onCloseModal, onSignIn }) => {
         </button>
         <p className="form__text">
           Or&nbsp;
-          <span className="form__url" onClick={onSignIn}>
+          <a className="form__url" onClick={onSignIn}>
             Signin
-          </span>
+          </a>
         </p>
       </form>
     </ModalWithForm>

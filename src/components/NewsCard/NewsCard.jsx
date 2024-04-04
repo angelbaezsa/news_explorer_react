@@ -44,7 +44,7 @@ function NewsCard({ item, onSignIn, onDelete }) {
         <img
           className="card__image"
           src={item.urlToImage}
-          alt={`illustration of ${item.publisher}`}
+          alt={`illustration of ${item.source.name}`}
           // onClick={() => {
           //   onClickedCard(item);
           // }}

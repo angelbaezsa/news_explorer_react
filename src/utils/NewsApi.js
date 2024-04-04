@@ -1,5 +1,4 @@
-import { baseUrl } from "./Constants";
-import { apiKey } from "./Constants";
+import { baseUrl , apiKey } from "./Constants";
 
 const date = new Date();
 const tempTo = date.toISOString();
@@ -13,6 +12,7 @@ export class NewsApi {
   constructor({ baseUrl }) {
     this._baseUrl = baseUrl;
   }
+
   processServerResponse = (res) => {
     if (res.ok) {
       return res.json();
@@ -22,8 +22,7 @@ export class NewsApi {
 
   // `q=${keyword}&` + "from=2024-03-25&" + "sortBy=popularity&" + `${apiKey}`;
 
-  getNews = (keyword) => {
-    return fetch(
+  getNews = (keyword) => fetch(
       `${baseUrl}q=${keyword}&from=${fromDate}&to=${toDate}&pageSize=${pageSize}&apiKey=${apiKey}`,
       {
         method: "GET",
@@ -32,7 +31,6 @@ export class NewsApi {
         },
       }
     ).then(this.processServerResponse);
-  };
 }
 
 export const newsApi = new NewsApi({ baseUrl });

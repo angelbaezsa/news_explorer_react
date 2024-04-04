@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import toggleButtonClosed from "../../images/menu.svg";
 import toggleButtonOpen from "../../images/close.svg";
 import toggleButtonClosedBlack from "../../images/menu_black.svg";
-import toggleButtonOpenBlack from "../../images/close_black.svg";
+// import toggleButtonOpenBlack from "../../images/close_black.svg";
 import icon from "../../images/logout.svg";
 
 const NavBar = ({ onHome, onSignIn, onSignOut }) => {
@@ -19,7 +19,7 @@ const NavBar = ({ onHome, onSignIn, onSignOut }) => {
   };
 
   return location.pathname === "/" ? (
-    <nav className={`${isToggle ? "navbar_black" : "navbar"} `}>
+    <nav className={`${isToggle ? "navbar__black" : "navbar"} `}>
       <NavLink to="/">
         <h3 className="navbar__logo light-font">NewsExplorer</h3>
       </NavLink>
@@ -32,7 +32,7 @@ const NavBar = ({ onHome, onSignIn, onSignOut }) => {
       >
         <img
           src={`${isToggle ? toggleButtonOpen : toggleButtonClosed}`}
-          alt=""
+          alt="button"
         />
       </button>
 
@@ -61,12 +61,12 @@ const NavBar = ({ onHome, onSignIn, onSignOut }) => {
         <div className="toggle-menu_modal">
           <div className="toggle-menu-wrapper">
             <ul className="navbar__toggle-menu toggle-menu">
-              <li className="toggle-menu_item">
+              <li className="toggle-menu__item">
                 <NavLink to="/saved-news" className="toggle-menu__link">
                   Saved news
                 </NavLink>
               </li>
-              <li className="toggle-menu_item">
+              <li className="toggle-menu__item">
                 <button
                   onClick={() => {
                     onSignIn();
@@ -83,7 +83,7 @@ const NavBar = ({ onHome, onSignIn, onSignOut }) => {
       ) : null}
     </nav>
   ) : (
-    <nav className={`${isToggle ? "navbar_black" : "navbar__saved-news"} `}>
+    <nav className={`${isToggle ? "navbar__black" : "navbar__saved-news"} `}>
       <NavLink to="/">
         <h3
           className={`navbar__logo  ${isToggle ? `light-font` : `dark-font`}`}
@@ -100,7 +100,7 @@ const NavBar = ({ onHome, onSignIn, onSignOut }) => {
       >
         <img
           src={`${isToggle ? toggleButtonOpen : toggleButtonClosedBlack}`}
-          alt=""
+          alt="button"
         />
       </button>
 
@@ -136,7 +136,7 @@ const NavBar = ({ onHome, onSignIn, onSignOut }) => {
           >
             {/* here goes the user.name*/}
             Elize
-            <img className="navbar__button-icon" src={icon} alt="" />
+            <img className="navbar__button-icon" src={icon} alt="icon" />
           </button>
         </li>
       </ul>
@@ -144,12 +144,12 @@ const NavBar = ({ onHome, onSignIn, onSignOut }) => {
         <div className="toggle-menu_modal">
           <div className="toggle-menu-wrapper">
             <ul className="navbar__toggle-menu toggle-menu">
-              <li className="toggle-menu_item">
+              <li className="toggle-menu__item">
                 <NavLink to="/" className="toggle-menu__link">
                   Home
                 </NavLink>
               </li>
-              <li className="toggle-menu_item">
+              <li className="toggle-menu__item">
                 <button className="toggle-menu__button">Sign out</button>
               </li>
             </ul>

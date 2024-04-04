@@ -18,15 +18,15 @@ const SavedNewsHeader = () => {
   };
 
   return (
-    <div className="saved-news__header">
+    <section className="saved-news__header">
       <p className="saved-news__header-title">Saved articles</p>
-      <h2 className="saved-news__header-subtitle">
+      <h1 className="saved-news__header-subtitle">
         Elize, You have {cardListArray.length} saved articles
-      </h2>
+      </h1>
       <p className="saved-news__keywords">
         By keywords: {<strong>{renderKeywords()}</strong>}
       </p>
-    </div>
+    </section>
   );
 };
 

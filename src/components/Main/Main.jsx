@@ -20,7 +20,7 @@ const Main = ({ isLoading, searchResults, savedNews, onSignIn, onDelete }) => {
               <img
                 className="main__not-found_image"
                 src={notFoundImage}
-                alt=""
+                alt="not found ilustration"
               />
               <h2 className="main__not-found-title">Nothing found</h2>
               <p className="main__nothing-found-text">

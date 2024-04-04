@@ -67,6 +67,11 @@
   .main {
     padding: 16px;
     padding-top: 32px;
-    row-gap: 58px;
+    padding-bottom: 24px;
+    row-gap: 16px;
+  }
+
+  .main__title {
+    padding-bottom: 42px;
   }
 }

@@ -72,9 +72,9 @@ const LoginModal = ({ onCloseModal, onSignUp }) => {
         </button>
         <p className="form__text">
           Or&nbsp;
-          <span className="form__url" onClick={onSignUp}>
+          <a className="form__url" onClick={onSignUp}>
             Signup
-          </span>
+          </a>
         </p>
       </form>
     </ModalWithForm>

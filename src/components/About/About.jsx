@@ -1,9 +1,9 @@
-import "../About/About.css";
+import "./About.css";
 import me from "../../images/hipster2.jpeg";
 
 const About = () => {
   return (
-    <div className="about">
+    <section className="about">
       <div className="about__portrait-wrapper portrait-wrapper">
         <img
           className="about__portrait portrait"
@@ -21,7 +21,7 @@ const About = () => {
           ReactJS, NodeJs, Express, MongoDB, Bootstrap.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

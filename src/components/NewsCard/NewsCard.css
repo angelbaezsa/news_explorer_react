@@ -61,8 +61,10 @@
   background-repeat: no-repeat;
   cursor: pointer;
 }
-
 .card__delete-button:hover {
+  opacity: 0.95;
+}
+.card__delete-button:active {
   background-image: url("../../images/trash_black.svg");
 }
 
@@ -98,6 +100,9 @@
 }
 .card__save-button:hover {
   background-image: url("../../images/Rectangle 9.svg");
+}
+.card__save-button:active {
+  background-image: url("../../images/Rectangle 10.svg");
 }
 .save-button-wrapper:hover .card__signin-button {
   display: block;
@@ -190,6 +195,29 @@
   .card {
     min-width: 224px;
     max-height: 420px;
+  }
+  .card__button-wrapper {
+    margin-top: 8px;
+  }
+
+  .save-button-wrapper {
+    right: 8px;
+  }
+
+  .card__text-wrapper {
+    padding-top: 10px;
+  }
+  .card__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    max-height: 88px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    margin-bottom: 12px;
   }
 }
 

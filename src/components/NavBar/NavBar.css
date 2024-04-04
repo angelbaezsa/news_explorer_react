@@ -55,7 +55,7 @@ li {
   position: relative;
 }
 
-.navbar_black {
+.navbar__black {
   grid-area: navbar navbar navbar;
   position: absolute;
 
