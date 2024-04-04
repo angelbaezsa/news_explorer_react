@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
 import "./RegisterModal.css";
 
 const RegisterModal = ({ onCloseModal, onSignIn }) => {

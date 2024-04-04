@@ -8,7 +8,7 @@ import toggleButtonClosedBlack from "../../images/menu_black.svg";
 // import toggleButtonOpenBlack from "../../images/close_black.svg";
 import icon from "../../images/logout.svg";
 
-const NavBar = ({ onHome, onSignIn, onSignOut }) => {
+const NavBar = ({ onSignIn, onSignOut }) => {
   // Receive props as an object
 
   const [isToggle, setIsToggle] = useState(false);
@@ -27,7 +27,9 @@ const NavBar = ({ onHome, onSignIn, onSignOut }) => {
       <button
         onClick={handleToggleMenu}
         className={`navbar__toggle-button toggle-button ${
-          isToggle ? "toggle-button_open" : "toggle-button_closed"
+          isToggle
+            ? "navbar__toggle-button_open"
+            : "navbar__toggle-button_closed"
         }`}
       >
         <img
@@ -50,7 +52,7 @@ const NavBar = ({ onHome, onSignIn, onSignOut }) => {
         </li>
         <li>
           <button
-            className="light-font navbar__button button-type-signin"
+            className="light-font navbar__button navbar__signin-button"
             onClick={onSignIn}
           >
             Signin
@@ -95,7 +97,9 @@ const NavBar = ({ onHome, onSignIn, onSignOut }) => {
       <button
         onClick={handleToggleMenu}
         className={`navbar__toggle-button toggle-button ${
-          isToggle ? "toggle-button_open" : "toggle-button_closed"
+          isToggle
+            ? "navbar__toggle-button_open"
+            : "navbar__toggle-button_closed"
         }`}
       >
         <img
@@ -131,7 +135,7 @@ const NavBar = ({ onHome, onSignIn, onSignOut }) => {
         </li>
         <li>
           <button
-            className="dark-font navbar__button button-type-signout-dark"
+            className="dark-font navbar__button navbar__signout-button"
             onClick={onSignOut}
           >
             {/* here goes the user.name*/}

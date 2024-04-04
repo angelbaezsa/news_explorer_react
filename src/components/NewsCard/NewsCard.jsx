@@ -1,12 +1,13 @@
 import { useCallback, useContext, useState } from "react";
 import "./NewsCard.css";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
-import { formatDate } from "../../utils/utils.js";
+import { formatDate } from "../../utils/utils";
 
 function NewsCard({ item, onSignIn, onDelete }) {
   const location = useLocation();
 
   const [user, setUser] = useState(false);
+  console.log(useCallback, setUser, useContext);
 
   return (
     <div className="card">
@@ -27,7 +28,7 @@ function NewsCard({ item, onSignIn, onDelete }) {
         </div>
       ) : (
         <div className="card__button-wrapper">
-          <div className="save-button-wrapper">
+          <div className="card__save-button-wrapper">
             {user ? null : (
               <button
                 onClick={onSignIn}

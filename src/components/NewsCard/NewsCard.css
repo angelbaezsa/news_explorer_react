@@ -75,7 +75,7 @@
   display: block;
 }
 
-.save-button-wrapper {
+.card__save-button-wrapper {
   position: absolute;
   display: flex;
   column-gap: 5px;
@@ -200,7 +200,7 @@
     margin-top: 8px;
   }
 
-  .save-button-wrapper {
+  .card__save-button-wrapper {
     right: 8px;
   }
 

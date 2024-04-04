@@ -1,10 +1,13 @@
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+
 import "./NewsCardList.css";
+
 import React, { useState, useEffect } from "react";
 import NewsCard from "../NewsCard/NewsCard.jsx";
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min.js";
-import cardListArray from "../../utils/utils.js";
+import cardListArray from "../../utils/utils";
 
 const NewsCardList = ({ cardList, onDelete, onSignIn }) => {
+  console.log(onDelete); // method will be useful later
   const location = useLocation();
   const [numberOfCards, setNumberOfCards] = useState(3);
   const [hideShowMoreButton, setHideShowMoreButton] = useState(true);
@@ -25,23 +28,20 @@ const NewsCardList = ({ cardList, onDelete, onSignIn }) => {
   return location.pathname === "/" ? (
     <>
       {/* <h2 className="main__title">Search results</h2> */}
-      <div className="main__card-container card-container">
+      <div className="cardlist__card-container">
         {firstThreeCards.map((item, index) => (
           <NewsCard onSignIn={onSignIn} item={item} key={index} />
         ))}
       </div>
       {!hideShowMoreButton && (
-        <button
-          onClick={showMore}
-          className="main__show-more_button show-more_button"
-        >
+        <button onClick={showMore} className="cardlist__show-more_button">
           Show more
         </button>
       )}
     </>
   ) : (
     <>
-      <div className="main__card-container card-container">
+      <div className="cardlist__card-container">
         {cardListArray.map((item, index) => (
           <NewsCard onSignIn={onSignIn} item={item} key={index} />
         ))}

@@ -1,5 +1,7 @@
 import "./App.css";
-
+import { Switch, Route } from "react-router-dom";
+import { useState } from "react";
+import { newsApi } from "../../utils/NewsApi";
 import NavBar from "../NavBar/NavBar.jsx";
 import Header from "../Header/Header.jsx";
 import Main from "../Main/Main.jsx";
@@ -8,9 +10,6 @@ import Footer from "../Footer/Footer.jsx";
 import SavedNews from "../SavedNews/SavedNews.jsx";
 import RegisterModal from "../RegisterModal/RegisterModal.jsx";
 import LoginModal from "../LoginModal/LoginModal.jsx";
-import { Switch, Route } from "react-router-dom";
-import { useState } from "react";
-import { newsApi } from "../../utils/NewsApi.js";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -33,6 +32,10 @@ function App() {
       });
     }
   };
+  const handleCloseModal = () => {
+    setOpenModal("");
+    document.removeEventListener("keydown", handleKeyDown);
+  };
 
   const handleKeyDown = (event) => {
     if (event.key === "Escape") {
@@ -46,10 +49,6 @@ function App() {
   const handleOpenModal = (modal) => {
     setOpenModal(modal);
     document.addEventListener("keydown", handleKeyDown);
-  };
-  const handleCloseModal = () => {
-    setOpenModal("");
-    document.removeEventListener("keydown", handleKeyDown);
   };
 
   return (

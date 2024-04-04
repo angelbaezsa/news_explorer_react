@@ -118,7 +118,9 @@
 .form__url {
   color: #2f71e5;
 }
+.form__url:active {
+  color: black;
+}
 .form__url:hover {
-  /* opacity: 0.7; */
-  color: #b6bcbf;
+  opacity: 0.7;
 }

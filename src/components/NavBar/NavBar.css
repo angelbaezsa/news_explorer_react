@@ -110,7 +110,7 @@ li {
   padding-bottom: 17px;
   width: 160px;
 }
-.button-type-signin {
+.navbar__signin-button {
   border-radius: 25px;
   border: 1px white solid;
   background-color: transparent;
@@ -119,7 +119,7 @@ li {
   margin: 0;
   align-self: center;
 }
-.button-type-signout-dark {
+.navbar__signout-button {
   border-radius: 25px;
   border: 1px rgb(0, 0, 0) solid;
   background-color: transparent;
@@ -169,18 +169,18 @@ li {
     display: none;
   }
 
-  .toggle-button_closed {
+  .navbar__toggle-button_closed {
     display: block;
     background-image: url("../../images/menu.svg");
     background: no-repeat;
   }
-  .toggle-button_open {
+  .navbar__toggle-button_open {
     display: block;
     background-image: url("../../images/close.svg");
     background: no-repeat;
   }
 
-  .toggle-button_black_closed {
+  .navbar__toggle-button_black_closed {
     display: block;
     background-image: url("../../images/close_black.svg");
 
