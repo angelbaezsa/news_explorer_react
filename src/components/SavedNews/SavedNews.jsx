@@ -6,14 +6,12 @@ import cardListArray from "../../utils/utils";
 
 import Main from "../Main/Main.jsx";
 
-const SavedNews = () => {
-  return (
-    <>
-      <SavedNewsHeader />
-      <Main searchResults={cardListArray} />
-      <Footer />
-    </>
-  );
-};
+const SavedNews = () => (
+  <>
+    <SavedNewsHeader />
+    <Main searchResults={cardListArray} />
+    <Footer />
+  </>
+);
 
 export default SavedNews;

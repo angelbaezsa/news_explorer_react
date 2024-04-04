@@ -13,7 +13,7 @@
   margin-bottom: 22px;
 }
 
-.input-fieldset {
+.form__input-fieldset {
   border: none;
   margin: 0;
   margin-bottom: 25px;
@@ -21,7 +21,7 @@
 }
 
 /* Remove margin-bottom for the last .input-fieldset */
-.input-fieldset:last-of-type {
+.form__input-fieldset:last-of-type {
   margin-bottom: 0;
 }
 
@@ -119,8 +119,11 @@
   color: #2f71e5;
 }
 .form__url:active {
-  color: black;
+  color: #2a65cc;
 }
 .form__url:hover {
-  opacity: 0.7;
+  color: rgb(89, 42, 132);
+}
+.form__url:focus {
+  color: #ff0000;
 }

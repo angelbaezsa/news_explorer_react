@@ -14,7 +14,7 @@
 .content {
   background-color: #fff;
   box-sizing: border-box;
-  align-items: start;
+  align-items: flex-start;
   border-radius: 20px;
   display: flex;
   flex-direction: column;

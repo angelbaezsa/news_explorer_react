@@ -21,7 +21,7 @@ const NavBar = ({ onSignIn, onSignOut }) => {
   return location.pathname === "/" ? (
     <nav className={`${isToggle ? "navbar__black" : "navbar"} `}>
       <NavLink to="/">
-        <h3 className="navbar__logo light-font">NewsExplorer</h3>
+        <h3 className="navbar__logo navbar__logo_light-font">NewsExplorer</h3>
       </NavLink>
 
       <button
@@ -41,7 +41,7 @@ const NavBar = ({ onSignIn, onSignOut }) => {
       <ul className="navbar__button-wrapper">
         <li>
           <NavLink
-            className={`light-font navbar__button navbar__home-button ${
+            className={`navbar__button_light-font navbar__button navbar__home-button ${
               location.pathname === "/" ? "navbar__home-button_selected" : null
             }`}
             to="/"
@@ -52,7 +52,7 @@ const NavBar = ({ onSignIn, onSignOut }) => {
         </li>
         <li>
           <button
-            className="light-font navbar__button navbar__signin-button"
+            className="navbar__button_light-font navbar__button navbar__signin-button"
             onClick={onSignIn}
           >
             Signin
@@ -88,7 +88,7 @@ const NavBar = ({ onSignIn, onSignOut }) => {
     <nav className={`${isToggle ? "navbar__black" : "navbar__saved-news"} `}>
       <NavLink to="/">
         <h3
-          className={`navbar__logo  ${isToggle ? `light-font` : `dark-font`}`}
+          className={`navbar__logo  ${isToggle ? `navbar__logo_light-font` : `navbar__logo_dark-font`}`}
         >
           NewsExplorer
         </h3>
@@ -111,7 +111,7 @@ const NavBar = ({ onSignIn, onSignOut }) => {
       <ul className="navbar__button-wrapper">
         <li>
           <NavLink
-            className={`dark-font navbar__button navbar__home-button ${
+            className={`navbar__button_dark-font navbar__button navbar__home-button ${
               location.pathname === "/" ? "navbar__home-button_selected" : null
             }`}
             to="/"
@@ -122,7 +122,7 @@ const NavBar = ({ onSignIn, onSignOut }) => {
         </li>
         <li>
           <NavLink
-            className={`dark-font navbar__button navbar__home-button ${
+            className={`navbar__button_dark-font navbar__button navbar__home-button ${
               location.pathname === "/saved-news"
                 ? "navbar__saved-news-button_selected"
                 : null
@@ -135,10 +135,9 @@ const NavBar = ({ onSignIn, onSignOut }) => {
         </li>
         <li>
           <button
-            className="dark-font navbar__button navbar__signout-button"
+            className="navbar__button_dark-font navbar__button navbar__signout-button"
             onClick={onSignOut}
           >
-            {/* here goes the user.name*/}
             Elize
             <img className="navbar__button-icon" src={icon} alt="icon" />
           </button>

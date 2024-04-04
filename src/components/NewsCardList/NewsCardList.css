@@ -4,19 +4,8 @@
   column-gap: 16px;
   row-gap: 16px;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
   flex-grow: 1;
-}
-
-.main__title {
-  font-family: "roboto slab", serif;
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 46px;
-  letter-spacing: 0px;
-  text-align: left;
-  margin: 0;
-  /* margin-left: 102px; */
 }
 
 .cardlist__show-more_button {
@@ -42,16 +31,6 @@
 @media only screen and (max-width: 1003px) {
   .cardlist__card-container {
     column-gap: 8px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .main__title {
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 34px;
-    letter-spacing: 0px;
-    text-align: left;
   }
 }
 

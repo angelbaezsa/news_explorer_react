@@ -13,25 +13,24 @@ export class NewsApi {
     this.baseUrl = url;
   }
 
-  processServerResponse = (res) => {
+  processServerResponse(res) {
     if (res.ok) {
-      return res.json();
+      return this.res.json();
     }
-    return Promise.reject(`Error: ${res.status}`);
-  };
+    return Promise.reject(new Error(`Error: ${res.status}`));
+  }
 
-  // `q=${keyword}&` + "from=2024-03-25&" + "sortBy=popularity&" + `${apiKey}`;
-
-  getNews = (keyword) =>
-    fetch(
-      `${baseUrl}q=${keyword}&from=${fromDate}&to=${toDate}&pageSize=${pageSize}&apiKey=${apiKey}`,
+  getNews(keyword) {
+    return fetch(
+      `${this.baseUrl}q=${keyword}&from=${fromDate}&to=${toDate}&pageSize=${pageSize}&apiKey=${apiKey}`,
       {
         method: "GET",
         headers: {
-          authorization: `${apiKey}`,
+          authorization: apiKey,
         },
       }
     ).then(this.processServerResponse);
+  }
 }
 
 export const newsApi = new NewsApi({ baseUrl });

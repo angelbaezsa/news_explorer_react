@@ -7,6 +7,17 @@
   background: #f5f6f7;
 }
 
+.main__title {
+  font-family: "roboto slab", serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 46px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0;
+  /* margin-left: 102px; */
+}
+
 .main__not-found-wrapper {
   display: inline-flex;
   flex-direction: column;
@@ -73,5 +84,15 @@
 
   .main__title {
     padding-bottom: 42px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main__title {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0px;
+    text-align: left;
   }
 }
