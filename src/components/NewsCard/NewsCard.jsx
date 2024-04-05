@@ -7,7 +7,7 @@ function NewsCard({ item, onSignIn, onDelete }) {
   const location = useLocation();
 
   const [user, setUser] = useState(false);
-  setUser(false);
+  console.log(setUser);
   // todo: (setUser, useContext) methods are going to be needed to connect back end
 
   return (

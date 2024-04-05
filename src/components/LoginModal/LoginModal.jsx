@@ -11,7 +11,7 @@ const LoginModal = ({ onCloseModal, onSignUp }) => {
   } = useForm({ mode: "onChange" });
 
   const onSubmit = () => {
-    // console.log(data);
+    // todo: (data) will be useful later
   };
 
   return (
