@@ -13,10 +13,9 @@ const SavedNewsHeader = () => {
     }
     if (keywordCount === 2) {
       return `${cardListArray[0].source.name} and ${cardListArray[1].source.name}`;
-    } else {
-      const otherCount = keywordCount - 2;
-      return `${cardListArray[0].source.name}, ${cardListArray[1].source.name}, and ${otherCount} other`;
     }
+    const otherCount = keywordCount - 2;
+    return `${cardListArray[0].source.name}, ${cardListArray[1].source.name}, and ${otherCount} other`;
   };
 
   return (

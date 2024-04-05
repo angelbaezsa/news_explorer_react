@@ -12,8 +12,8 @@ import cardListArray from "../../utils/utils";
 
 import notFoundImage from "../../images/notfound.svg";
 
-const Main = ({ isLoading, searchResults, savedNews, onSignIn, onDelete }) => {
-  console.log(savedNews); // array will be usefull later
+const Main = ({ isLoading, searchResults, onSignIn, onDelete }) => {
+  // TODO: (savedNews) array will be usefull later add it to the main props
   const location = useLocation();
   return location.pathname === "/" ? (
     <main className="main">

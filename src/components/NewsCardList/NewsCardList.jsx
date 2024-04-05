@@ -6,8 +6,8 @@ import React, { useState, useEffect } from "react";
 import NewsCard from "../NewsCard/NewsCard.jsx";
 import cardListArray from "../../utils/utils";
 
-const NewsCardList = ({ cardList, onDelete, onSignIn }) => {
-  console.log(onDelete); // method will be useful later
+const NewsCardList = ({ cardList, onSignIn }) => {
+  // todo: (onDelete) method will be useful later, add it to props
   const location = useLocation();
   const [numberOfCards, setNumberOfCards] = useState(3);
   const [hideShowMoreButton, setHideShowMoreButton] = useState(true);

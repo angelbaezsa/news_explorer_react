@@ -10,8 +10,8 @@ const RegisterModal = ({ onCloseModal, onSignIn }) => {
     formState: { errors, isValid }, // Destructure isValid from formState
   } = useForm({ mode: "onChange" });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = () => {
+    // console.log(data);
   };
 
   return (
@@ -92,7 +92,7 @@ const RegisterModal = ({ onCloseModal, onSignIn }) => {
         </button>
         <p className="form__text">
           Or&nbsp;
-          <a className="form__url" onClick={onSignIn}>
+          <a tabindex="0" className="form__url" onClick={onSignIn}>
             Signin
           </a>
         </p>

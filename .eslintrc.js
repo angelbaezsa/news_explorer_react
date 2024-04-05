@@ -5,10 +5,17 @@ module.exports = {
     es2021: true,
   },
   // update the extensions
-  extends: ["eslint:recommended", "airbnb-base", "prettier"],
+  extends: [
+    "eslint:recommended",
+    "airbnb-base",
+    "prettier",
+    "plugin:prettier/recommended",
+  ],
   overrides: [],
   parserOptions: {
     ecmaVersion: "latest",
   },
-  rules: {},
+  rules: {
+    "class-methods-use-this": "off",
+  },
 };

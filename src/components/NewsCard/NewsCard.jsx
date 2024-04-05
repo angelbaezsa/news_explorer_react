@@ -1,4 +1,4 @@
-import { useCallback, useContext, useState } from "react";
+import { useState } from "react";
 import "./NewsCard.css";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { formatDate } from "../../utils/utils";
@@ -7,7 +7,8 @@ function NewsCard({ item, onSignIn, onDelete }) {
   const location = useLocation();
 
   const [user, setUser] = useState(false);
-  console.log(useCallback, setUser, useContext);
+  setUser(false);
+  // todo: (setUser, useContext) methods are going to be needed to connect back end
 
   return (
     <div className="card">

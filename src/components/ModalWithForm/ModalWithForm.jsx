@@ -4,9 +4,9 @@
 import "./ModalWithForm.css";
 import React from "react";
 
-function ModalWithForm({ children, onCloseModal, name }) {
+function ModalWithForm({ children, onCloseModal }) {
   return (
-    <div className={`modal modal_type_${name}`}>
+    <div className={`modal`}>
       <div className="content">
         <button className="modal__close-button" onClick={onCloseModal}></button>
         {children}

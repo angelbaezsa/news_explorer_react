@@ -24,9 +24,9 @@ function App() {
       // console.log("this is the search result: ", keyword);
       newsApi.getNews(keyword).then((response) => {
         if (response.length !== 0) {
-          console.log(response.articles);
+          // console.log(response.articles);
           setSearchResult(response.articles);
-          console.log(searchResult);
+          // console.log(searchResult);
           setIsLoading(false);
         }
       });
@@ -34,12 +34,12 @@ function App() {
   };
   const handleCloseModal = () => {
     setOpenModal("");
-    document.removeEventListener("keydown", handleKeyDown);
   };
 
   const handleKeyDown = (event) => {
     if (event.key === "Escape") {
       handleCloseModal();
+      document.removeEventListener("keydown", handleKeyDown);
     }
   };
 
