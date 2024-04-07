@@ -24,20 +24,21 @@
   display: flex;
   flex-direction: column;
   left: 0;
-  top: -65px;
+  /* top: -65px; */
+  top: 0;
+
   z-index: 1;
-  cursor: pointer;
 }
 
-.search-form {
+.header__form-wrapper {
+  position: relative;
+}
+.header__search-form {
   max-width: 600px;
   margin: auto auto 80px;
 }
 
-.form-wrapper {
-  position: relative;
-}
-.title {
+.header__title {
   margin: 0;
   margin-bottom: 30px;
   font-size: 60px;
@@ -48,11 +49,11 @@
   text-overflow: initial;
   text-align: start;
 }
-.sub-title {
+.header__sub-title {
   margin: 0;
   margin-bottom: 88px;
   text-wrap: pretty;
-  font-family: "Roboto";
+  font-family: "roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -64,21 +65,22 @@
   width: 100%;
   border-radius: 50px;
   height: 65px;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif;
   font-size: 20px;
   padding-left: 25px;
   border: 1px #ffffff;
+  /* cursor: pointer; */
 }
 
 .search-bar::placeholder {
   color: #b6bcbf;
 }
-.submit-button {
+.search-form__submit-button {
   border: none;
   width: 168px;
   border-radius: 50px;
   height: 100%;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
@@ -87,16 +89,17 @@
   box-shadow: 0px 5px 15px 0px rgba(14, 26, 57, 0.2);
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 
 .submit-button_disabled {
   background: #e6e8eb;
 }
-.submit-button:hover {
+.search-form__submit-button:hover {
   background: #347eff;
   box-shadow: 0px 5px 15px 0px #0e1a3933;
 }
-.submit-button:active {
+.search-form__submit-button:active {
   background: #2a65cc;
   box-shadow: 0px 5px 15px 0px #0e1a3933;
   animation: ease-in-out;
@@ -107,18 +110,20 @@
   .header {
     padding: 104px 16px 0 16px;
   }
-  .title {
+  .header__title {
     font-size: 36px;
     text-wrap: wrap;
     margin-bottom: 16px;
     line-height: 40px;
   }
-  .sub-title {
+  .header__sub-title {
     margin-bottom: 48px;
   }
-  .search-form {
+  .header__search-form {
     max-width: 452px;
+    margin: auto auto 48px;
   }
+
   .search-bar {
     height: 56px;
   }
@@ -128,20 +133,24 @@
   .header {
     padding: 86px 16px 0 16px;
   }
-  .title {
+  .header__title {
     font-size: 36px;
     line-height: 40px;
     margin-bottom: 16px;
   }
-  .sub-title {
+  .header__sub-title {
     text-wrap: wrap;
+    margin-bottom: 122px;
   }
-
+  .header__search-form {
+    max-width: 452px;
+    margin: auto auto 32px;
+  }
   .search-bar {
     height: 56px;
   }
 
-  .submit-button {
+  .search-form__submit-button {
     position: relative;
     height: 56px;
     width: 100%;

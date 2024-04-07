@@ -1,12 +1,13 @@
 .footer {
   display: flex;
   max-width: 1440px;
-  max-height: 80px;
+  height: 80px;
   box-sizing: border-box;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif;
   justify-content: space-between;
+  align-items: center;
   position: relative;
-  top: -65px;
+  /* top: -65px; */
   padding-right: 104px;
   padding-left: 104px;
 }
@@ -14,14 +15,82 @@
 .footer__text {
   margin: 0;
   color: #b6bcbf;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
   letter-spacing: 0px;
   text-align: left;
 }
+.item-wrapper {
+  display: flex;
+  max-height: 100%;
+}
 
-.icon-linkedin {
-  height: 20px;
+.footer__item {
+  font-family: "roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-decoration: none;
+  color: #1a1b22;
+  margin-right: 40px;
+  margin-bottom: 5px;
+}
+
+.footer__icon-github {
+  height: 24px;
+  width: 24px;
+}
+
+.footer__icon-linkedin {
+  height: 24px;
+  width: 24px;
+  margin-left: 26px;
+}
+
+@media only screen and (max-width: 500px) {
+  .footer {
+    padding: 0 16px 0 16px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 868px) {
+  .footer {
+    padding: 0 40px 0 40px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .footer {
+    box-sizing: border-box;
+    /* max-height: 176px; */
+    flex-direction: column-reverse;
+    padding: 20px 16px 22px;
+    height: 176px;
+  }
+
+  .footer__text {
+    margin-top: 38px;
+    /* width: 100%; */
+  }
+  .item-wrapper {
+    display: flex;
+    max-height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    /* padding-top: 20px; */
+  }
+
+  .footer__item-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+  }
 }

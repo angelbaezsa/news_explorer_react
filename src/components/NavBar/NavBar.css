@@ -3,8 +3,35 @@
   src: url("../../../public/fonts/Roboto-Regular.ttf") format("truetype");
 }
 
+ul {
+  margin: 0;
+}
+
 li {
   list-style: none;
+}
+
+.light-font {
+  color: white;
+}
+
+.navbar__button_light-font {
+  color: white;
+}
+
+.navbar__logo_light-font {
+  color: white;
+}
+
+.dark-font {
+  color: black;
+}
+.navbar__button_dark-font {
+  color: black;
+}
+
+.navbar__logo_dark-font {
+  color: black;
 }
 
 .navbar {
@@ -22,9 +49,31 @@ li {
   z-index: 2;
   color: white;
   border-bottom: solid #d1d2d667 0.05px;
+  position: absolute;
 }
-.navbar_black {
+
+.navbar__saved-news {
   grid-area: navbar navbar navbar;
+  width: 100%;
+  height: 65px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 105px;
+  background: #c4c4c403;
+  z-index: 2;
+  color: black;
+  border-bottom: solid #d1d2d667 0.05px;
+  position: relative;
+}
+
+.navbar__black {
+  grid-area: navbar navbar navbar;
+  position: absolute;
+
   width: 100%;
   height: 56px;
   box-sizing: border-box;
@@ -34,7 +83,7 @@ li {
   align-items: center;
   cursor: pointer;
   padding: 16px;
-  background-color: #000000;
+  background-color: #1a1b22;
   z-index: 2;
   color: white;
   border-bottom: solid #d1d2d667 0.05px;
@@ -44,19 +93,65 @@ li {
   font-weight: 700;
   font-size: 20px;
   text-decoration: none;
-  color: white;
+  /* color: white; */
 }
 
 .navbar__button-wrapper {
   display: flex;
   flex-direction: row;
-  column-gap: 20px;
+  align-items: center;
+  column-gap: 16px;
+  height: 100%;
 }
 
 .navbar__button {
   font-family: "roboto", sans-serif;
   font-weight: 500;
   font-size: 20px;
+  /* color: white; */
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar__home-button_selected {
+  border-bottom: 3px white solid;
+  padding-bottom: 17px;
+}
+.navbar__saved-news-button_selected {
+  display: inline-block;
+  text-align: center;
+  margin-top: 17px;
+  border-bottom: 3px rgb(0, 0, 0) solid;
+  padding-bottom: 17px;
+  width: 160px;
+}
+.navbar__signin-button {
+  border-radius: 25px;
+  border: 1px white solid;
+  background-color: transparent;
+  width: 152px;
+  height: 48px;
+  margin: 0;
+  align-self: center;
+}
+.navbar__signout-button {
+  border-radius: 25px;
+  border: 1px rgb(0, 0, 0) solid;
+  background-color: transparent;
+  width: 100px;
+  height: 48px;
+  margin: 0;
+  align-self: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__button-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
 }
 
 .navbar__toggle-button {
@@ -75,8 +170,12 @@ li {
 
 /* screen media devices only from this point only */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .navbar {
+    padding: 0 auto 0 16px;
+    max-height: 56px;
+  }
+  .navbar_saved-news {
     padding: 0 auto 0 16px;
     max-height: 56px;
   }
@@ -85,28 +184,44 @@ li {
     display: none;
   }
 
-  .toggle-button_closed {
+  .navbar__toggle-button_closed {
     display: block;
     background-image: url("../../images/menu.svg");
     background: no-repeat;
   }
-  .toggle-button_open {
+  .navbar__toggle-button_open {
     display: block;
     background-image: url("../../images/close.svg");
     background: no-repeat;
   }
+
+  .navbar__toggle-button_black_closed {
+    display: block;
+    background-image: url("../../images/close_black.svg");
+
+    background: no-repeat;
+  }
+
+  .toggle-button_black_open {
+    display: block;
+    background-image: url("../../images/menu_black.svg");
+
+    background: no-repeat;
+  }
+
   .toggle-menu_modal {
     display: flex;
     position: fixed; /* Fixed position for modal */
     left: 0;
     top: 56px;
+    right: 0;
+    bottom: 0;
     z-index: 1000; /* Higher z-index to appear on top of other content */
-    height: 100vh;
-    width: 100vw;
+
     background-color: rgba(0, 0, 0, 0.6); /* Use rgba for transparency */
     backdrop-filter: blur(5px); /* Add blur effect to the background */
-    justify-content: start;
-    align-items: start;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   /* Styles for the toggle menu wrapper */
@@ -115,8 +230,7 @@ li {
     z-index: 1100; /* Higher z-index than modal for content visibility */
     width: 100%; /* Adjust width as needed */
     height: 174px;
-    max-width: 500px; /* Set a max-width for responsiveness */
-    background-color: #000000; /* Background color for the menu */
+    background-color: #1a1b22; /* Background color for the menu */
     border-radius: 8px; /* Rounded corners for the menu */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
     box-sizing: border-box;
@@ -127,7 +241,7 @@ li {
     display: flex;
     flex-direction: column;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     margin-top: 16px;
     padding-left: 16px;
     padding-right: 16px;
@@ -139,6 +253,7 @@ li {
     font-weight: 500;
     font-family: "roboto", sans-serif;
     color: white;
+    text-decoration: none;
   }
   .toggle-menu__button {
     width: 100%;
@@ -160,9 +275,15 @@ li {
   .navbar {
     padding: 0 40px;
   }
+  .navbar__saved-news {
+    padding: 0 40px;
+  }
 }
 @media only screen and (max-width: 500px) {
   .navbar {
+    padding: 0 16px;
+  }
+  .navbar__saved-news {
     padding: 0 16px;
   }
 }
