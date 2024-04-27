@@ -1,4 +1,3 @@
-##Welcome to the News explorer front-end part
 # Getting Started with Create React App
 
 
